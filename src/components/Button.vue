@@ -11,3 +11,13 @@
         }
     }
 </script>
+
+<style media="screen" scoped>
+    button {
+        background: #000;
+        width: 100px;
+        height: 35px;
+        color: white;
+        border-radius: 3px;
+    }
+</style>

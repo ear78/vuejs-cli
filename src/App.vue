@@ -1,21 +1,15 @@
 <template>
     <div class="">
         <Home></Home>
-        <server-status></server-status>
-        <Button></Button>
     </div>
 
 </template>
 
 <script>
-    import ServerStatus from './components/ServerStatus.vue';
-    import Button from './components/Button.vue';
     import Home from './Home.vue';
 
     export default {
         components: {
-            ServerStatus: ServerStatus,
-            Button: Button,
             Home: Home
         }
     }
