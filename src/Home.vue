@@ -3,8 +3,15 @@
         <h1>{{title}}</h1>
         <button type="button" name="button" @click="changeName">Change Names</button>
 
-        <Comp1 :name="name" @nameWasReset="name = $event"></Comp1>
-        <Comp2 :name="name2"></Comp2>
+        <Comp1 :name="name"
+               @nameWasReset="name = $event"
+               :userAge="age"
+               ></Comp1>
+        <!-- using emit() event to change age from child component -->
+        <Comp2 :name="name2"
+               :userAge="age"
+               @ageWasChanged="age = $event"
+               ></Comp2>
     </div>
 </template>
 
@@ -17,7 +24,8 @@
             return {
                 title: 'This is the home vue/view',
                 name: 'Elliot',
-                name2: 'Johnny'
+                name2: 'Johnny',
+                age: 27
             }
         },
         methods: {

@@ -2,6 +2,7 @@
     <div class="comp1">
         <h1>{{title}}</h1>
         <p>User Name: {{ name }}</p>
+        <p>Age: {{ userAge }}</p>
         <button type="button" name="button" @click="resetName">reset</button>
     </div>
 </template>
@@ -13,7 +14,8 @@
             name: {
                 type: String,
                 required: true
-            }
+            },
+            userAge: Number
         },
         data: function(){
             return {
