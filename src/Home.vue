@@ -12,12 +12,18 @@
                :userAge="age"
                @ageWasChanged="age = $event"
                ></Comp2>
+
+        <Quote :quote="quoteStr">
+            <h1 slot="title">Here is an h1 slotted</h1>
+            <h6 slot="sub">Here is an h6 slotted</h6>
+        </Quote>
     </div>
 </template>
 
 <script type="text/javascript">
     import Comp1 from './components/Comp1.vue';
     import Comp2 from './components/Comp2.vue';
+    import Quote from './components/Quote.vue';
 
     export default {
         data: function(){
@@ -25,7 +31,8 @@
                 title: 'This is the home vue/view',
                 name: 'Elliot',
                 name2: 'Johnny',
-                age: 27
+                age: 27,
+                quoteStr: 'A wonderful quote!!!'
             }
         },
         methods: {
@@ -36,7 +43,8 @@
         },
         components: {
             Comp1: Comp1,
-            Comp2: Comp2
+            Comp2: Comp2,
+            Quote: Quote
         }
     }
 </script>
