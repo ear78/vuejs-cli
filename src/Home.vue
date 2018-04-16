@@ -3,7 +3,7 @@
         <h1>{{title}}</h1>
         <button type="button" name="button" @click="changeName">Change Names</button>
 
-        <Comp1 :name="name"></Comp1>
+        <Comp1 :name="name" @nameWasReset="name = $event"></Comp1>
         <Comp2 :name="name2"></Comp2>
     </div>
 </template>
