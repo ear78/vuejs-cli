@@ -1,5 +1,6 @@
 <template>
     <div class="">
+        <Http></Http>
         <Home></Home>
     </div>
 
@@ -7,10 +8,12 @@
 
 <script>
     import Home from './Home.vue';
+    import Http from './http.vue';
 
     export default {
         components: {
-            Home: Home
+            Home: Home,
+            Http: Http
         }
     }
 </script>
