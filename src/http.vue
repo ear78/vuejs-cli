@@ -35,8 +35,8 @@
             submit(){
                 console.log(this.user)
                 let user = this.user;
-                let url = 'https://simple-crud-db835.firebaseio.com/';
-                this.$http.post(url + '/user.json', user)
+
+                this.$http.post('', user)
                     .then( (response) => {
                         console.log(response)
                     }, error => {
@@ -44,8 +44,8 @@
                     });
             },
             getData(){
-                let url = 'https://simple-crud-db835.firebaseio.com/';
-                this.$http.get(url + '/user.json')
+                //using empty string for url because of global setup
+                this.$http.get('')
                     .then( (response) => {
                         console.log(response)
                         return response.json();

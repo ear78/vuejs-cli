@@ -1,7 +1,9 @@
 <template>
     <div class="">
-        <Http></Http>
-        <Home></Home>
+        <!-- <Http></Http> -->
+        <!-- <Home></Home> -->
+        <Header></Header>
+        <router-view></router-view>
     </div>
 
 </template>
@@ -9,11 +11,13 @@
 <script>
     import Home from './Home.vue';
     import Http from './http.vue';
+    import Header from './components/Header.vue';
 
     export default {
         components: {
             Home: Home,
-            Http: Http
+            Http: Http,
+            Header: Header
         }
     }
 </script>
