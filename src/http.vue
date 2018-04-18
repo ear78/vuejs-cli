@@ -13,7 +13,7 @@
         <hr>
         <button type="button" name="button" @click="getData">Get Data</button>
         <ul>
-            <li v-for="u in users">{{u.username - u.email}}</li>
+            <li v-for="user in users">{{ user.username}} -  {{user.email}}</li>
         </ul>
     </section>
 
@@ -47,6 +47,7 @@
                 let url = 'https://simple-crud-db835.firebaseio.com/';
                 this.$http.get(url + '/user.json')
                     .then( (response) => {
+                        console.log(response)
                         return response.json();
                     })
                     .then( data => {
