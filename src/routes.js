@@ -5,5 +5,5 @@ import User from './User.vue';
 export const routes = [
     { path: '/', component: Home},
     { path: '/http', component: Http},
-    { path: '/user', component: User}
+    { path: '/user/:id', component: User}
 ];
