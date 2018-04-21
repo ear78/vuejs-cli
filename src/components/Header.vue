@@ -1,8 +1,8 @@
 <template>
     <header>
         <ul>
-            <li v-for="item in menu"><router-link :to="item" >{{item}}</router-link></li>
-            <!-- <li><router-link to="/user">Users</router-link></li> -->
+            <!-- dynamically built menu -->
+            <router-link v-for="i in menu" :to="i.path" active-class="active" tag="li" exact><a >{{i.links}}</a></router-link>
         </ul>
     </header>
 </template>
@@ -11,8 +11,22 @@
     export default {
         data(){
             return {
-                menu: ['Home', 'Users']
+                menu: [
+                    {
+                    path: '/',
+                    links: 'Home'
+                },
+                {
+                    path: '/user',
+                    links: 'Users'
+                }]
             }
         }
     }
 </script>
+
+<style media="screen">
+    li.active a {
+        color: lightblue;
+    }
+</style>
