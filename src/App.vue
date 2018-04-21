@@ -11,13 +11,15 @@
 <script>
     import Home from './Home.vue';
     import Http from './http.vue';
+    import User from './User.vue';
     import Header from './components/Header.vue';
 
     export default {
         components: {
             Home: Home,
             Http: Http,
-            Header: Header
+            Header: Header,
+            User: User
         }
     }
 </script>

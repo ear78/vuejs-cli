@@ -19,6 +19,10 @@
                 {
                     path: '/user',
                     links: 'Users'
+                },
+                {
+                    path: '/http',
+                    links: 'Http'
                 }]
             }
         }

@@ -1,8 +1,9 @@
 import Http from './http.vue';
 import Home from './Home.vue';
+import User from './User.vue';
 
 export const routes = [
     { path: '/', component: Home},
-    { path: '/user', component: Http}
-
+    { path: '/http', component: Http},
+    { path: '/user', component: User}
 ];
