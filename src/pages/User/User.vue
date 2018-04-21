@@ -3,6 +3,8 @@
         <h1>I'm a user view</h1>
         <p>Loaded ID: {{ id }}</p>
         <button type="button" name="button" @click="navigateToHome">Back To Home</button>
+        <hr>
+        <router-view></router-view>
     </div>
 
 </template>
@@ -15,7 +17,7 @@
             }
         },
         watch: {
-            //using watch to have app watch when route changes to update component 
+            //using watch to have app watch when route changes to update component
             '$route'(to, from){
                 this.id = to.params.id;
             }

@@ -21,9 +21,9 @@
 </template>
 
 <script type="text/javascript">
-    import Comp1 from './components/Comp1.vue';
-    import Comp2 from './components/Comp2.vue';
-    import Quote from './components/Quote.vue';
+    import Comp1 from '../components/Comp1.vue';
+    import Comp2 from '../components/Comp2.vue';
+    import Quote from '../components/Quote.vue';
 
     export default {
         data: function(){

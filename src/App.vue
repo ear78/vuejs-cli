@@ -9,9 +9,9 @@
 </template>
 
 <script>
-    import Home from './Home.vue';
-    import Http from './http.vue';
-    import User from './User.vue';
+    import Home from './pages/Home.vue';
+    import Http from './pages/http.vue';
+    import User from './pages/User/User.vue';
     import Header from './components/Header.vue';
 
     export default {
