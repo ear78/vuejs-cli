@@ -4,6 +4,7 @@ import User from './pages/User/User.vue';
 import UserStart from './pages/User/UserStart.vue';
 import UserDetail from './pages/User/UserDetail.vue';
 import UserEdit from './pages/User/UserEdit.vue';
+import FourZeroFour from './components/404.vue';
 
 export const routes = [
     { path: '/', component: Home},
@@ -12,5 +13,8 @@ export const routes = [
         {path: '', component: UserStart},
         {path: ':id', component: UserDetail},
         {path: ':id/edit', component: UserEdit, name: 'userEdit'}
-    ]}
+    ]},
+    { path: '/redirect-me', redirect: '/user'},
+    { path: '/404', component: FourZeroFour },
+    { path: '*', redirect: '/404'}
 ];
