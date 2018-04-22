@@ -16,5 +16,6 @@ export const routes = [
     ]},
     { path: '/redirect-me', redirect: '/user'},
     { path: '/404', component: FourZeroFour },
+    // * gives us the wildcard for any route we don't have
     { path: '*', redirect: '/404'}
 ];

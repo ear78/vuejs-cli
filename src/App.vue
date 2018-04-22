@@ -1,9 +1,9 @@
 <template>
     <div class="">
-        <!-- <Http></Http> -->
-        <!-- <Home></Home> -->
         <Header></Header>
-        <router-view></router-view>
+        <transition name="slide" mode="out-in">
+            <router-view></router-view>
+        </transition>
     </div>
 
 </template>
@@ -50,5 +50,28 @@ li {
 
 a {
   color: #42b983;
+}
+
+
+.slide-enter-active {
+    transition: opacity 1.5s ease-out;
+    opacity: 1;
+    animation: slide-in 1.25s ease-out forwards;
+}
+
+.slide-enter {
+    opacity: 0;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateY(30px);
+    }
+    50% {
+        transform: translateY(-2px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 </style>
