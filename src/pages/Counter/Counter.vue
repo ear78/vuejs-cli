@@ -3,6 +3,7 @@
         <h1>Counter VueX</h1>
 
         <Result></Result>
+        <AnotherResult></AnotherResult>
         <button type="button" name="button" @click="increment">+</button>
         <button type="button" name="button" @click="decrement">-</button>
 
@@ -12,10 +13,12 @@
 
 <script>
 import Result from './Result.vue';
+import AnotherResult from './AnotherResult.vue';
 
 export default {
     components: {
-        Result: Result
+        Result: Result,
+        AnotherResult: AnotherResult
     },
     methods: {
         increment(){

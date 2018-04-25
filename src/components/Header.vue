@@ -23,6 +23,10 @@
                 {
                     path: '/http',
                     links: 'Http'
+                },
+                {
+                    path: '/counter',
+                    links: 'Counter'
                 }]
             }
         }
