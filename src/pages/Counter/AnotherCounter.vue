@@ -1,13 +1,13 @@
 <template lang="html">
     <div>
-        <h1>Counter VueX</h1>
+        <h3>Another Counter VueX Mutations</h3>
 
         <Result></Result>
         <AnotherResult></AnotherResult>
+
         <button type="button" name="button" @click="increment">+</button>
         <button type="button" name="button" @click="decrement">-</button>
 
-        <AnotherCounter></AnotherCounter>
 
     </div>
 </template>
@@ -15,20 +15,18 @@
 <script>
 import Result from './Result.vue';
 import AnotherResult from './AnotherResult.vue';
-import AnotherCounter from './AnotherCounter.vue';
 
 export default {
     components: {
         Result: Result,
-        AnotherResult: AnotherResult,
-        AnotherCounter: AnotherCounter
+        AnotherResult: AnotherResult
     },
     methods: {
         increment(){
-            this.$store.state.counter++;
+            this.$store.commit('increment');
         },
         decrement(){
-            this.$store.state.counter--;
+            this.$store.commit('decrement');
         }
     }
 }

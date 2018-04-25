@@ -3,7 +3,7 @@ import Vuex from 'vuex';
 
 Vue.use(Vuex);
 
-//use of getters to centralize store state 
+//use of getters to centralize store state
 export const store = new Vuex.Store({
     state: {
         counter: 0
@@ -11,6 +11,30 @@ export const store = new Vuex.Store({
     getters: {
         doubleCounter: state => {
             return state.counter * 2;
+        },
+        stringCounter: state => {
+            return state.counter + ' Clicks';
+        }
+    },
+    mutations: {
+        increment: state => {
+            state.counter++;
+        },
+        decrement: state => {
+            state.counter--;
+        }
+    },
+    actions: {
+        increment: context => {
+            context.commit('increment');
+        },
+        decrement: context => {
+            context.commit('decrement');
+        },
+        asyncIncrement: context => {
+            setTimeout(() => {
+                commit('increment')
+            }, 1000)
         }
     }
 })
