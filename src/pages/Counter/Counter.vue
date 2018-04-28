@@ -8,6 +8,7 @@
         <button type="button" name="button" @click="decrement">-</button>
 
         <AnotherCounter></AnotherCounter>
+        <ActionCounter></ActionCounter>
 
     </div>
 </template>
@@ -16,12 +17,14 @@
 import Result from './Result.vue';
 import AnotherResult from './AnotherResult.vue';
 import AnotherCounter from './AnotherCounter.vue';
+import ActionCounter from './ActionCounter.vue';
 
 export default {
     components: {
         Result: Result,
         AnotherResult: AnotherResult,
-        AnotherCounter: AnotherCounter
+        AnotherCounter: AnotherCounter,
+        ActionCounter: ActionCounter
     },
     methods: {
         increment(){

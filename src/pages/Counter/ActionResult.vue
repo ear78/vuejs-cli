@@ -3,7 +3,6 @@
         <p>Another Counter: {{ doubleCounter }}</p>
         <p>Number of Clicks: {{ stringCounter }}</p>
     </div>
-
 </template>
 
 <script>

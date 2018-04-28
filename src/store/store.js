@@ -34,7 +34,12 @@ export const store = new Vuex.Store({
         asyncIncrement: context => {
             setTimeout(() => {
                 commit('increment')
-            }, 1000)
+            }, 3000)
+        },
+        asyncDecrement: context => {
+            setTimeout(() => {
+                context.commit('decrement');
+            }, 3000)
         }
     }
 })

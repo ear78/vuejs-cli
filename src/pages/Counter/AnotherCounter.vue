@@ -13,6 +13,8 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex';
+
 import Result from './Result.vue';
 import AnotherResult from './AnotherResult.vue';
 
@@ -22,12 +24,12 @@ export default {
         AnotherResult: AnotherResult
     },
     methods: {
-        increment(){
-            this.$store.commit('increment');
-        },
-        decrement(){
-            this.$store.commit('decrement');
-        }
+        //using mapMutations allows for use of store and is shorter code centralized
+        ...mapMutations([
+            'increment',
+            'decrement'
+        ])
+
     }
 }
 </script>
