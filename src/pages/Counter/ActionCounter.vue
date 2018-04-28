@@ -4,8 +4,8 @@
 
         <ActionResult></ActionResult>
 
-        <button type="button" name="button" @click="asyncIncrement">+</button>
-        <button type="button" name="button" @click="asyncDecrement">-</button>
+        <button type="button" name="button" @click="asyncIncrement(100)">+</button>
+        <button type="button" name="button" @click="asyncDecrement({by: 50, duration: 1000})">-</button>
     </div>
 </template>
 
@@ -14,6 +14,7 @@ import { mapActions } from 'vuex';
 
 import ActionResult from './ActionResult.vue';
 
+//utilized passing payload in asyncIncrement and passing payload object in asyncDecrement
 export default {
     methods: {
         ...mapActions([
