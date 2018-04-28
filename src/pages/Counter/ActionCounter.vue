@@ -5,7 +5,7 @@
         <ActionResult></ActionResult>
 
         <button type="button" name="button" @click="asyncIncrement">+</button>
-        <button type="button" name="button" @click="decrement">-</button>
+        <button type="button" name="button" @click="asyncDecrement">-</button>
     </div>
 </template>
 
