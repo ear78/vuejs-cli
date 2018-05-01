@@ -6,23 +6,23 @@ Vue.use(Vuex);
 
 //use of getters to centralize store state
 export const store = new Vuex.Store({
-    // state: {
-    //     // counter: 0
-    // },
+    state: {
+        // counter: 0
+    },
     getters: {
         doubleCounter: state => {
-            return state.counter * 2;
+            return state.counter.counter * 2;
         },
         stringCounter: state => {
-            return state.counter + ' Clicks';
+            return state.counter.counter + ' Clicks';
         }
     },
     mutations: {
         increment: (state, payload) => {
-            state.counter += payload;
+            state.counter.counter += payload;
         },
         decrement: (state, payload) => {
-            state.counter -= payload;
+            state.counter.counter -= payload;
         }
     },
     actions: {
