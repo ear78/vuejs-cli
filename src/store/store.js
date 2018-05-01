@@ -1,13 +1,14 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import counter from './modules/counter';
 
 Vue.use(Vuex);
 
 //use of getters to centralize store state
 export const store = new Vuex.Store({
-    state: {
-        counter: 0
-    },
+    // state: {
+    //     // counter: 0
+    // },
     getters: {
         doubleCounter: state => {
             return state.counter * 2;
@@ -26,7 +27,7 @@ export const store = new Vuex.Store({
     },
     actions: {
         increment: (context, payload) => {
-            context.commit('increment', payload);
+            context.commit('increment');
         },
         decrement: context => {
             context.commit('decrement');
@@ -41,5 +42,8 @@ export const store = new Vuex.Store({
                 context.commit('decrement', payload.by);
             }, payload.duration)
         }
+    },
+    modules: {
+        counter: counter
     }
 })

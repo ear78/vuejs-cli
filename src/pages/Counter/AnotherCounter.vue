@@ -5,8 +5,8 @@
         <Result></Result>
         <AnotherResult></AnotherResult>
 
-        <button type="button" name="button" @click="increment">+</button>
-        <button type="button" name="button" @click="decrement">-</button>
+        <button type="button" name="button" @click="increment(1)">+</button>
+        <button type="button" name="button" @click="decrement(1)">-</button>
 
 
     </div>
