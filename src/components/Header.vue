@@ -27,6 +27,10 @@
                 {
                     path: '/counter',
                     links: 'Counter'
+                },
+                {
+                    path: '/http2',
+                    links: 'Http2'
                 }]
             }
         }

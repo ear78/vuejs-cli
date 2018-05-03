@@ -1,5 +1,6 @@
 import Counter from './pages/Counter/Counter.vue';
 import Http from './pages/http.vue';
+import Http2 from './pages/Http2/Http2.vue';
 import Home from './pages/Home.vue';
 import User from './pages/User/User.vue';
 import UserStart from './pages/User/UserStart.vue';
@@ -16,6 +17,7 @@ export const routes = [
         {path: ':id/edit', component: UserEdit, name: 'userEdit'}
     ]},
     { path: '/counter', component: Counter },
+    { path: '/http2', component: Http2 },
     { path: '/redirect-me', redirect: '/user'},
     { path: '/404', component: FourZeroFour },
     // * gives us the wildcard for any route we don't have
