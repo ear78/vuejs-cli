@@ -19,10 +19,14 @@
         <ul>
             <li v-for="u in moreUsers">{{ u.firstName }}&nbsp;{{ u.lastName }} - {{ u.email }}</li>
         </ul>
+
+        <Thankyou v-if="isShowing" @closeModal="isShowing = false"></Thankyou>
     </div>
 </template>
 
 <script>
+import Thankyou from '../../components/Thankyou.vue';
+
 export default {
     data(){
         return {
@@ -31,8 +35,12 @@ export default {
                 lastName: '',
                 email: ''
             },
-            moreUsers: []
+            moreUsers: [],
+            isShowing: false
         }
+    },
+    components: {
+        Thankyou: Thankyou
     },
     methods: {
         submitHttp2(){
@@ -44,6 +52,7 @@ export default {
                 }, error => {
                     console.log('error');
                 })
+                this.isShowing = true;
                 this.anotherUser.firstName = '';
                 this.anotherUser.lastName = '';
                 this.anotherUser.email = '';
