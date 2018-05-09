@@ -2,7 +2,10 @@
     <transition name="modal">
         <div class="thanks-modal">
             <span class="close-btn" @click="$emit('closeModal')">X</span>
-            <h1>Thanks for signing up!</h1>
+            <div class="desc-box">
+                <h1>Thanks for signing up!</h1>
+            </div>
+
         </div>
     </transition>
 </template>
@@ -30,6 +33,22 @@ export default {
         padding-top: 10%;
     }
 
+    .desc-box {
+        width: 80%;
+        height: 15%;
+        background: #fff;
+        color: #000;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h1 {
+        text-transform: uppercase;
+        font-size: .9em;
+    }
+
     .close-btn {
         position: absolute;
         top: 15px;
@@ -40,15 +59,17 @@ export default {
     .modal-enter,
     .modal-leave-to {
         opacity: 0;
+        transform: scale(.7);
     }
 
     .modal-leave {
         opacity: 1;
+        transform: scale(.9);
     }
 
     .modal-leave-active,
     .modal-enter-active {
-        transition: opacity .5s ease-out;
+        transition: all .3s ease-out;
     }
 
 </style>
